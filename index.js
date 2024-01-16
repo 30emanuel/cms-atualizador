@@ -9,7 +9,7 @@ dotenv.config();
 const app = express();
 const port = 3000;
 
-app.get('/executar', async (req, res) => {
+app.post('/executar', async (req, res) => {
   try {
     await run();
     res.send('Execução concluída!');
